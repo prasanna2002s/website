@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>registration form</title>
+</head>
+
+<body>
+  <div class="me">
+    <form name="f1" method="get/post" action=" ">
+      
+      <h1 align="center">REGISTRATION FORM</h1>
+        <table border=0 cellspacing="2" cellpadding="5">
+            <tr>
+                <td><label for = "username">USERNAME:</label></td>
+                <td><input type="text" name="uname" placeholder="name" required></td>
+            </tr>
+            <tr>
+                <td><label for="email">EMAIL:</label></td>
+                <td><input type="email" name="eid"placeholder="mail id" required></td>
+            </tr>
+            <tr>
+                <td><label for="gender">GENDER:</label></td>
+                <td><input type="radio" name="gen">male</td>
+                <td><input type="radio" name="gen">female</td>
+            </tr>
+            <tr>
+                <td><label for="rel">RELIGION:</label></td>
+                <td><select name="rel" required>
+                    <option>HINDU</option>
+                    <option>MUSLIM</option>
+                    <option>CHRISTIAN</option>
+                    <option>JAIN</option>
+                  
+                </select></td>
+            </tr>
+            <tr>
+                <td><label for="DOB">DOB:</label></td>
+                <td><input type="date" name="DOB" required></td>
+            </tr>
+            <tr>
+                <td><label for="lang">LANGUAGES:</label></td>
+                <td><input type="checkbox" name="lang">T
+                 <input type="checkbox" name="lang">E
+                </td>
+            </tr>
+            <tr>
+                <td><Label for="address">ADRRESS:</Label></td>
+                <td><textarea rows=5 cols=20></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="password">PASSWORD:</label></td>
+                <td><input type="password" name="pwd"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" name="SUBMIT" value="SUBMIT" style= color:blue></td>
+                <td><input type="reset" name="reset" style= color:blue></td>
+            </tr>
+            <tr class="ch">
+              <td><input type="checkbox" name="tc">i agree to the terms and conditions</td>
+            </tr>    
+            
+        </table>
+       
+   
+         <nav class="NAV">
+            <a href="#">Help</a>
+          </nav>
+        
+              
+    </form>
+              </div>
+</body>
+</html>

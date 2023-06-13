@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+         body {
+    margin: 50px;
+    border-style:dashed;
+    font-style: serif;
+    background-image: url('im.jpg');
+              color: rgb(10, 1, 16);
+              text-align: center;
+              font: weight 2000px;
+              font-style: italic;
+              background-repeat: no-repeat;
+              background-size: cover;
+   
+  }
+  .req{
+    border: 5px double;
+    background-color: rgb(189, 225, 225);    
+    text-align: center;
+    color:rgb(17, 3, 24)
+  }
+  a
+  {
+    flex:10;
+    text-decoration:name;
+    outline:name;
+    text-align:left;
+    line-height:3;
+    color:black;
+  }
+  a:link,
+  a:visited,
+  a:focus
+  {
+    background:white;
+    color:rgb(19, 1, 5);
+  }
+  
+  a:hover
+  {
+    color:black;
+  }
+ h1{
+  text-decoration: wavy;
+  color: rgb(34, 176, 93);
+  background-color: rgb(4, 53, 72);
+ }
+.ch{
+ 
+  color: rgb(12, 2, 49);
+}
+           
+        </style>
+    </head>
+    <body>
+        <div class="req">
+            <form name="f" method="get" action="">
+                <h1 align:center>REGISTRATION FORM</h1>
+                <table border:"0" cellspacing:"0" cellpadding="5">
+                    <tr>
+                        <td><label for="username">USERNAME:</label></td>
+                        <td><input type="text" name="u"  class="da" placeholder="name" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">EMAIL:</label></td>
+                        <td><input type="email" name="e" class="da" placeholder="mail id" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="gender">GENDER:</label></td>
+                        <td><input type="radio" name="g">MALE</td>
+                        <td><input type="radio" name="g">FEMALE</td>
+                    </tr>
+                    <tr>
+                        <td><label for="rele">REIGION:</label></td>
+                        <td><select name="rele" required>
+                            <option>HINDU</option>
+                            <option>CHIRSTIAN</option>
+                            <option>MUSLIM</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td><label for="b">DOB:</label></td>
+                        <td><input type="date" name="d" class="da" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="l">LANGUAGES:</label></td>
+                        <td><input type="checkbox" name="l" >TELUGU
+                            <input type="checkbox" name="l" >HINDI
+                            <input type="checkbox" name="l" >ENGLISH
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="ad">ADDRESS:</label></td>
+                        <td><textarea rows="5" cols="20" class="do"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><label for="p">PASSWORD:</label></td>
+                        <td><input type="password" name="p" class="da" placeholder="password" required></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" name="s" style:color:blue></td>
+                        <td><input type="reset" name="r" style:color:blue></td>
+                    </tr>
+                    <tr class="ch">
+                        <td><input type="checkbox" name="t">I agree to a terms and conditions</td>
+                    </tr>
+                </table>
+                <nav class="n">
+                    <a href="#">HELP</a>
+                    <a href="#">SUPPORT</a>
+                </nav>
+            </form>
+        </div>
+    </body>
+</html>

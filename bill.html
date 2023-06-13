@@ -1,0 +1,140 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styleb.css"/>
+  <style>
+    background-image:url(p4.jpg)
+  </style>  
+</head>
+<body style="background-color:rgb(0, 255, 255)">
+  <div class="container">
+  <div class="pricelist">
+   <h1 style="color:red">WELCOME TO OUR FOOD COURT</h1>
+    <h1 style="color:red">FOOD MENU</h1>
+    <table>
+      <tr>
+        <td style="color:black" >VEG FRIED RICE </td>
+        <td style="color:rgb(0, 0, 0)">MUTTON BIRYANI</td>
+        <td style="color:black">CHICKEN BIRYANI</td>
+        <td style="color:black">MANDHI</td>
+        <td style="color:black">SOFT DRINKS</td>
+      </tr>
+    </table>
+
+  <br>
+
+  <form class="bill1">
+    <select id="sf">
+  <option selected value = "VEG FRIED RICE">VEG FRIED RICE</option>
+  <option value = "MUTTON BIRYANI">MUTTON BIRYANI</option>
+  <option value = "CHICKEN BIRYANI">CHICKEN BIRYANI</option>
+  <option value = "MANDHI">MANDHI</option>
+  <option value = "SOFT DRINKS">SOFT DRINKS</option>
+</select>
+    <input type="text" id="entrybox" pattern="\d*" placeholder="Input Amount">&nbsp;<b>PAC</b>&nbsp;&nbsp;
+    <input type="button" value="ADD T0 CART" class="mybutton" id="getme">
+  </form>
+</div>
+  <br><br>
+  <div class="right">
+  <textarea class="bill" cols="100" rows="12" id="writeme"></textarea>
+  <br>
+  <input type="submit" value="CLEAR TEXTAREA" class="mybutton bill3" id="clr">
+  <input type="submit" value="PAY BILL" class="mybutton bill2" id="out">
+</div>
+</div>
+  </body>
+  <!--<style>
+    body{
+      background-image: url("d.jpg");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      color="white";
+    }
+  </style>-->
+
+  <script>
+    var vfr = 120;
+    var vb = 350;
+
+    var cb = 200;
+    var n = 700;
+    var sd = 20;
+    var total = 0;
+    var check = 1;
+    var gw;
+    var sfruit;
+    var perpac;
+    var adder = document.querySelector("#getme");
+    adder.addEventListener("click", getMe);
+    var by = document.querySelector("#out");
+    by.addEventListener("click", checkOut);
+    var cme = document.querySelector("#clr");
+    cme.addEventListener("click", clearMe);
+
+    function getMe() {
+      sfruit = document.querySelector("#sf").value;
+      perpac = parseFloat(document.querySelector("#entrybox").value);
+      gw = document.querySelector("#writeme");
+      if (Number.isNaN(perpac) === true) {
+          alert("Only Numbers !!! Or The Field is Empty");
+        check = 0;
+       }
+      else if (perpac<0) {
+        alert("Negative value!! @stupid");
+        check = 0;
+      }
+      else{
+        check = 1;
+      }
+  if (check == 1) {
+ 
+    switch (sfruit) {
+      case "VEG FRIED RICE":
+        var st = vfr* perpac;
+        gw.value += "VEG FRIED RICE" + perpac + " pac = " + st + " rs\r";
+        total += st;
+        perpac.value = "";
+        break;
+      case "MUTTON BIRYANI":
+        var at = vb * perpac;
+        gw.value += "MUTTON BIRYANI " + perpac + " pac = " + at + " rs\r";
+        total += at;
+        perpac.value = "";
+        break;
+      case "CHICKEN BIRYANI":
+        var gr = cb * perpac;
+        gw.value += "CHICKEN BIRYANI " + perpac + " pac = " + gr + " rs\r";
+        total += gr;
+        perpac.value = "";
+        break;
+      case "MANDHI":
+        var ga = n * perpac;
+        gw.value += "MANDHI " + perpac + " pac  = " + ga + " RS\r";
+        total += ga;
+        perpac.value = "";
+        break;
+      case "SOFT DRINKS":
+        var pomy = sd * perpac;
+        gw.value += "SOFT DRINKS " + perpac + " pac = " + pomy + " rs\r";
+        total += pomy;
+        perpac.value = "";
+        break;
+    }
+
+  }
+}
+
+function checkOut() {
+  gw.value += "--------------------------------------------------------------\r";
+  gw.value += "Your Total Bill Is = " + total + " rs Thanks For Shopping! :)\r";
+  gw.value += "--------------------------------------------------------------\r";
+  total = 0;
+}
+function clearMe () {
+  gw.value = "";
+}
+
+</script>
+</html>
